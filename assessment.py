@@ -14,4 +14,5 @@ class Assessment:
         else:
             return "failed"
 
-    
+    def display_info(self):
+        print(f"{self.title}-Max score: {self.max_score}")
