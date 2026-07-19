@@ -125,6 +125,26 @@ class Gradebook:
             if not found:
                 print("Student not found.")
 
+    def delete_student(self, student_id):
+
+        if student_id not in self.students:
+            print("Student not found.")
+            return
+
+        for course in self.courses.values():
+
+            if student_id in course.students:
+                course.students.remove(student_id)
+
+        if student_id in self.grades:
+            del self.grades[student_id]
+
+        del self.students[student_id]
+
+        print("Student deleted successfully.")
+
+
+
 
 
 
