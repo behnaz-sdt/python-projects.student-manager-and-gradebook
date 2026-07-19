@@ -81,6 +81,14 @@ class Gradebook:
         else:
             return 0
 
+    def get_result(self, average):
+
+        if average >= self.passing_grade:
+            return "Passed"
+
+        else:
+            return "Failed"
+
 
 
 
