@@ -113,6 +113,20 @@ class Gradebook:
                 print("Average:", average)
                 print("Result:", self.get_result(average))
 
+    def search_student(self, keyword):
+        found = False
+
+        for student_id, student in self.students.items():
+            if keyword.lower() == student_id.lower() or keyword.lower() == student.get_name().lower():
+
+                student.display_info()
+                found = True
+
+            if not found:
+                print("Student not found.")
+
+
+
 
 
 
