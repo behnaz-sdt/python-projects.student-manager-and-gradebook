@@ -50,7 +50,24 @@ class Gradebook:
         else:
             print("Course not found.")
 
+    def record_grade(self, student_id, course_code, assessment_title, score):
 
+        if student_id in self.students and course_code in self.courses:
+            assessment = self.courses[course_code].find_assessment(assessment_title)
+
+            if assessment:
+
+              self.grades[student_id][course_code][assessment_title] = score
+
+              print("Grade recorded successfully.")
+
+            else:
+              print("Assessment not found.")
+
+        else:
+            print("Student or course not found")
+
+    
 
 
 
