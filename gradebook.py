@@ -89,6 +89,30 @@ class Gradebook:
         else:
             return "Failed"
 
+    def show_report(self, student_id):
+
+        if student_id not in self.students:
+            print("Student not found.")
+            return
+        student = self.students[student_id]
+
+        print("Student Report")
+        print("Name:", student.get_name())
+        print("Student ID:", student.get_id())
+
+        if student_id in self.grades:
+
+            for course_code, assessment in self.grades[student_id].items():
+
+                print("\nCourse:", course_code)
+
+                for title, score in assessment.items():
+                    print(f"{title}: {score}")
+
+                average = self.calculate_average(student_id, course_code)
+                print("Average:", average)
+                print("Result:", self.get_result(average))
+
 
 
 
