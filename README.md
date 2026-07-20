@@ -61,6 +61,11 @@ Inheritance is used in Quiz, Exam and Project classes. All three of these classe
 ### Method Overriding
 Method overriding is used in Quiz, Exam and Project classes by changing inherited methods such as 'display_info()' and 'grade_message' to provide specific behaviors.
 
+## Data Structures Used
+
+The project uses dictionaries to store students, courses and grades for fast access and organization.
+It also uses lists to store enrolled courses, students, and assessments, making it easy to manage multiple items with in the system.
+
 ## Custom Features
  - Letter Grade System: Converts student averages into letter grades such as A, B, C, D and F.
  - Teacher Comments: Add personalized comments to student reports based on their performance.
